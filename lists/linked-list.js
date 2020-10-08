@@ -66,6 +66,23 @@ class LinkedList {
     }
   }
 
+  deleteHead () {
+    if (!this.head) {
+      return null
+    }
+
+    const deletedItem = this.head
+
+    if (this.head.next) {
+      this.head = this.head.next
+    } else {
+      this.head = null
+      this.tail = null
+    }
+
+    return deletedItem
+  }
+
   toArray () {
     const elements = []
     let curNode = this.head
