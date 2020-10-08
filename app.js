@@ -1,4 +1,4 @@
-class Queue {
+class HashTable {
   constructor () {
   }
 }
