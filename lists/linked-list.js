@@ -93,18 +93,3 @@ class LinkedList {
     return elements
   }
 }
-
-const linkedList1 = new LinkedList()
-linkedList1.append(1)
-linkedList1.append('Hello')
-linkedList1.append('Star')
-linkedList1.append(true)
-linkedList1.append(79.2)
-linkedList1.prepend('first')
-console.log(linkedList1.toArray())
-linkedList1.delete('first')
-linkedList1.delete('Hello')
-console.log(linkedList1.toArray())
-linkedList1.insertAfter('new value', true)
-linkedList1.insertAfter('new value', 1)
-console.log(linkedList1.toArray())
