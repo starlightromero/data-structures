@@ -1,4 +1,4 @@
-import { LinkedList } from './lists/linked-list'
+import { LinkedList } from './lists/linked-list.js'
 
 class LinkedStack {
   constructor () {
@@ -22,14 +22,13 @@ class LinkedStack {
   }
 }
 
-const linkedStack1 = new LinkedStack()
-linkedStack1.push(1)
-linkedStack1.push('Hello')
-linkedStack1.push('Star')
-linkedStack1.push(true)
-linkedStack1.push(79.2)
-linkedStack1.push('first')
-console.log(linkedStack1.toArray())
-linkedStack1.pop()
-linkedStack1.pop()
-console.log(linkedStack1.toArray())
+const linkedStack = new LinkedStack()
+linkedStack.push('Cook dinner!')
+linkedStack.push('Wash the dishes!')
+linkedStack.push('Buy ingredients!')
+console.log(linkedStack.toArray())
+console.log(linkedStack.pop())
+console.log(linkedStack.toArray())
+console.log(linkedStack.pop())
+console.log(linkedStack.pop())
+console.log(linkedStack.toArray())
