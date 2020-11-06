@@ -42,18 +42,3 @@ class HashTable {
     }
   }
 }
-
-const table1 = new HashTable()
-for (const char of 'academind') {
-  table1.set(char, char)
-}
-
-for (const char of 'hello') {
-  table1.set(char, char)
-}
-
-for (const char of 'does this work') {
-  table1.set(char, char)
-}
-
-console.log(table1.showInfo())
