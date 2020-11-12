@@ -49,6 +49,34 @@ class Node {
       exisitingChildNode.removeNode(segments.slice(1).join('/'))
     }
   }
+
+  // findNode (value) {
+  //   // Depth-first
+  //   for (const child of this.children) {
+  //     if (child.value === value) {
+  //       return child
+  //     }
+  //     const nestedChildNode = child.findNode(value)
+  //     if (nestedChildNode) {
+  //       return nestedChildNode
+  //     }
+  //   }
+  // }
+
+  findNode (value) {
+    // Breadth-first
+    for (const child of this.children) {
+      if (child.value === value) {
+        return child
+      }
+    }
+    for (const child of this.children) {
+      const nestedChildNode = child.findNode(value)
+      if (nestedChildNode) {
+        return nestedChildNode
+      }
+    }
+  }
 }
 
 class Tree {
@@ -63,6 +91,13 @@ class Tree {
   remove (path) {
     this.root.removeNode(path)
   }
+
+  find (value) {
+    if (this.root.value === value) {
+      return this.root
+    }
+    return this.root.findNode(value)
+  }
 }
 
 const filesystem = new Tree('/')
@@ -70,5 +105,6 @@ filesystem.add('documents/personal/tax.docx')
 filesystem.add('games/cod.exe')
 filesystem.add('games/cod2.exe')
 filesystem.remove('games/cod.exe')
+console.log(filesystem.find('personal'))
 
 console.log(filesystem)
