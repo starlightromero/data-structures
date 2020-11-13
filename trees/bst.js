@@ -49,7 +49,7 @@ class Node {
     }
 
     if (identifiedNode.left && identifiedNode.right) {
-      cont nextBiggerNode = identifiedNode.right.findNext()
+      const nextBiggerNode = identifiedNode.right.findNext()
       if (nextBiggerNode.value !== identifiedNode.right.value) {
         this.remove(nextBiggerNode.value)
         identifiedNode.value = nextBiggerNode.value
@@ -99,7 +99,7 @@ class Node {
   }
 
   findNext () {
-    if(!this.left) {
+    if (!this.left) {
       return this
     }
     return this.left.findNext()
