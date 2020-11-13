@@ -12,7 +12,7 @@ The key is transformed to an index using a hashing function
 
 ### Time Complexity
 
-x | Hash Tables | Arrays | Objects
+Operation | Hash Tables | Arrays | Objects
 -- | -- | -- | --
 Element Access | O(1), O(n) with lots of hash collisions  | O(1) | O(1)
 Insertion at End | O(1), O(n) with lots of hash collisions | O(1) | O(1)
