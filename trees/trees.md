@@ -57,3 +57,19 @@ x | BST | Arrays
 Access/Search | Worst O(n), Average O(log n) | O(1) (with index), O(n) (search)
 Insertion | Worst O(n), Average O(log n) | O(1) (at end), O(n) (at beginning)
 Removal | Worst O(n), Average O(log n) | O(1) (at end), O(n) (at beginning)
+
+
+# AVL Tree (Georgy **A**delson-**V**elsky  Evgenii **L**andis )
+
+A BST which balances itself out. Subtrees should have a **depth** that is **equal or differs by at most 1**. Whenever there is a difference of greater than 1, the tree needs to be balanced.
+
+### Rotations
+
+* Left Rotation
+* Right Rotation
+* Left-Right Rotation
+* Right-Left Rotation
+
+### Balance Factors
+
+The difference between subtree depths (left vs right)
