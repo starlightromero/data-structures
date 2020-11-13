@@ -1,5 +1,7 @@
 # Trees
 
+## Basic Tree
+
 A unidirectional, **non-linear** data structure with **edges** that connent **vertices** (nodes). There is a **root node** and there are **no cycles** (loops).
 
 ### Examples
@@ -29,7 +31,7 @@ A unidirectional, **non-linear** data structure with **edges** that connent **ve
 
 ### Time Complexity
 
-x | Trees | Arrays
+Operation | Trees | Arrays
 -- | -- | --
 Access/Search | O(n) | O(1) (with index), O(n) (search)
 Insertion | O(n) | O(1) (at end), O(n) (at beginning)
@@ -42,7 +44,7 @@ Depth-First | Breadth-First
 Dig into the tree first and explore sibiling tress step by step | Evaluate all sibiling values first before you dig into the tree in depth
 
 
-# Binary Search Tree (BST)
+## Binary Search Tree (BST)
 
 A tree with **sorted data** where very node has at most **two child nodes**.
 
@@ -52,14 +54,14 @@ Right child node is **bigger**
 
 ### Time Complexity
 
-x | BST | Arrays
+Operation | BST | Arrays
 -- | -- | --
 Access/Search | Worst O(n), Average O(log n) | O(1) (with index), O(n) (search)
 Insertion | Worst O(n), Average O(log n) | O(1) (at end), O(n) (at beginning)
 Removal | Worst O(n), Average O(log n) | O(1) (at end), O(n) (at beginning)
 
 
-# AVL Tree (Georgy **A**delson-**V**elsky  Evgenii **L**andis )
+## AVL Tree (Georgy **A**delson-**V**elsky  Evgenii **L**andis )
 
 A BST which balances itself out. Subtrees should have a **depth** that is **equal or differs by at most 1**. Whenever there is a difference of greater than 1, the tree needs to be balanced.
 
@@ -73,3 +75,15 @@ A BST which balances itself out. Subtrees should have a **depth** that is **equa
 ### Balance Factors
 
 The difference between subtree depths (left vs right)
+
+
+## Trie
+
+Tree in which the root node always holds an empty value. The root node has one child per character in the alphabet.
+
+Operation | Trie | Hash Table
+-- | -- | --
+Insert | O(n) | O(1), O(n) (with collisions)
+Find | O(n) | O(1), O(n) (with collisions)
+Delete | O(n) | O(1), O(n) (with collisions)
+Space Complexity | O(n*k) | O(n)
